@@ -1,12 +1,12 @@
 
 import './App.css'
-import FilmCard from './assets/modules/FilmCard/FilmCard'
+import FilmList from './assets/modules/FilmList/FilmList'
 
 function App() {
 
   return (
     <>
-    <FilmCard/>
+    <FilmList/>
     </>
   )
 }

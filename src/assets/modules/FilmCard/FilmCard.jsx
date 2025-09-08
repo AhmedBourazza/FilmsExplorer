@@ -1,13 +1,13 @@
 import "./FilmCard.css";
 import pic01 from "../../images/inception.jpg";
 
-function FilmCard() {
+function FilmCard(props) {
   return (
     <div className="film-card">
-      <img src={pic01} alt="Film" />
+      <img src={props.image} alt="Film" />
       <div className="film-info">
-        <h2>Inception</h2>
-        <p>Un voleur infiltre les rêves pour voler des secrets...</p>
+        <h2>{props.title}</h2>
+        <p>{props.pop}</p>
       </div>
     </div>
   );
