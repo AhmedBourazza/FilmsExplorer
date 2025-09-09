@@ -13,8 +13,11 @@ function Navbar(props) {
       <div className="navbar-logo">🎥 MyMovies</div>
 
       <ul className="navbar-links">
-        <li><a href="/">Accueil</a></li>
-        <li><a href="/popular">Populaires</a></li>
+        <li><a href="/">Movies</a></li>
+        <li><a href="/"  onClick={(e) => {
+      e.preventDefault(); // ⛔ empêche le rechargement
+      props.fetchPopularSeries(); // ✅ appelle ta fonction
+    }}>Series</a></li>
         <li><a href="/top">Top 10</a></li>
         <li><a href="/about">À propos</a></li>
       </ul>

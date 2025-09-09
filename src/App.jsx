@@ -17,6 +17,19 @@ function App() {
   }
 };
 
+  const fetchPopularSeries = async () => {
+  try {
+    const response = await fetch(
+    "https://api.themoviedb.org/3/tv/popular?api_key=569c2bad3f7135cafe65f1ad1885cab7&language=fr-FR&page=1"
+    );
+    const data = await response.json();
+    setFilms(data.results)
+    console.log("data.results")
+  } catch (error) {
+    console.error("Erreur lors de la récupération :", error);
+  }
+};
+
     async function  searchFilmByName(name) {
       console.log("2 input est "+name)
         const response = await fetch(
@@ -35,7 +48,7 @@ function App() {
 
   return (
     <>
-    <Navbar searchFilmByName={searchFilmByName} />
+    <Navbar searchFilmByName={searchFilmByName} fetchPopularSeries={fetchPopularSeries} />
     <FilmList films = {films}/>
     </>
   )
