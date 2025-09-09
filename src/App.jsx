@@ -33,7 +33,7 @@ function App() {
     async function  searchFilmByName(name) {
       console.log("2 input est "+name)
         const response = await fetch(
-      `https://api.themoviedb.org/3/search/movie?api_key=569c2bad3f7135cafe65f1ad1885cab7&language=fr-FR&query=${name}
+      `https://api.themoviedb.org/3/search/movie?api_key=569c2bad3f7135cafe65f1ad1885cab7&language=fr-FR&query=${name
 }`
     );
         const resultat =await response.json(); 

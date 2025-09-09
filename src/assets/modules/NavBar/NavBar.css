@@ -64,3 +64,19 @@
 .navbar-search button:hover {
   background: #b20710;
 }
+
+/* Boutons dans la navbar (Films / Séries) */
+.navbar-links li button.navbar-link {
+  background: none;         /* Pas de fond */
+  border: none;             /* Pas de bordure */
+  color: #fff;              /* Couleur du texte */
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.3s;
+  font-size: 1rem;
+  padding: 0;               /* Même alignement que les liens */
+}
+
+.navbar-links li button.navbar-link:hover {
+  color: #e50914;           /* Même effet que les liens a:hover */
+}
