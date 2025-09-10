@@ -2,6 +2,8 @@ import React,{useState,useEffect} from 'react';
 import './App.css'
 import FilmList from './assets/modules/FilmList/FilmList'
 import Navbar from './assets/modules/NavBar/NavBar'
+import FilmDetail from './assets/modules/FilmDetails/FilmDetail';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
     const [films,setFilms] =useState([]);
@@ -47,11 +49,18 @@ function App() {
   }, []); // [] => exécuté seulement au montage du composant
 
   return (
-    <>
-    <Navbar searchFilmByName={searchFilmByName} fetchPopularSeries={fetchPopularSeries} />
-    <FilmList films = {films}/>
-    </>
-  )
+    <Router>
+      <Navbar
+        searchFilmByName={searchFilmByName}
+        fetchPopularSeries={fetchPopularSeries}
+      />
+
+      <Routes>
+        <Route path="/" element={<FilmList films={films} />} />
+        <Route path="/film/:id" element={<FilmDetail />} />
+      </Routes>
+    </Router>
+  );
 }
 
 export default App

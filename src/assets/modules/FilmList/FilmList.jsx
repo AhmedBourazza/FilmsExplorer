@@ -7,14 +7,15 @@ function FilmList(props) {
 
 
 
-
   return (
     <div  className="film-list">
       {props.films.map(film => (
-        <FilmCard  key={film.id} title={film.original_title} pop={film.popularity} image={"https://image.tmdb.org/t/p/w500"+film.poster_path} />
+        <FilmCard id={film.id}  key={film.id} title={film.original_title} pop={film.popularity} image={"https://image.tmdb.org/t/p/w500"+film.poster_path} />
       ))}
     </div>
   );
 }
 
 export default FilmList;
+
+ 

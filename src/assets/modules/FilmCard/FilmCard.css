@@ -52,13 +52,12 @@
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.3s ease, transform 0.3s ease;
-  
+
 }
 
 .film-card:hover .film-info {
   opacity: 1;
   transform: translateY(0);
-
 }
 
 .film-info h2 {

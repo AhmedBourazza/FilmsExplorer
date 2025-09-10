@@ -1,0 +1,80 @@
+.film-detail {
+  position: relative;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.7);
+  z-index: 1;
+}
+
+.film-detail-content {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.back-button {
+  background: #e50914;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  font-size: 1rem;
+}
+
+.back-button:hover {
+  background: #b20710;
+}
+
+.film-detail-main {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.film-detail-poster {
+  width: 300px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.7);
+}
+
+.film-detail-info {
+  max-width: 700px;
+}
+
+.film-detail-info h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #e50914;
+}
+
+.tagline {
+  font-style: italic;
+  color: #ccc;
+  margin-bottom: 15px;
+}
+
+.film-detail-info p {
+  margin: 6px 0;
+  line-height: 1.6;
+}
+
+.overview {
+  margin-top: 20px;
+  font-size: 1.1rem;
+}
