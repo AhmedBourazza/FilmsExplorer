@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./Navbar.css";
+import "./NavBar.css";
 
 function Navbar(props) {
     const [query,setQuery] = useState("");
